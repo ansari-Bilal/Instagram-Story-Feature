@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #3e3838;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card{
+    height: 550px;
+    width: 370px;
+    background-color: #070707;
+    border-radius: 10px;
+    border: 2px solid black;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#stories{
+    height: 160px;
+    width:100%;
+    /* background-color: rgb(183, 100, 100); */
+    padding: 20px;
+    white-space: nowrap;   /* this will put all the stories in one line */
+    overflow-x: auto;     /* this will hide the overflowing stories but will create a scrollbar*/
+    overflow-y: hidden;   /* this will remove the scrollbar created along yaxis in the stories*/
+}
+
+#stories::-webkit-scrollbar{
+    display: none;        /* this will remove the scrollbar created */
+}
+
+.story{
+    height: 100px;
+    width: 100px;
+    border: 3px solid rgb(94, 192, 25);
+    border-radius: 50%;
+    overflow:hidden;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.story img:hover{
+    cursor: pointer;
+}
+
+#fullscreen{
+    height: 100%;
+    width: 100%;
+    /* background-color: #956630; */
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
